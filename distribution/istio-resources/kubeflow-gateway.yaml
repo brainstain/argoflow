@@ -11,7 +11,7 @@ spec:
     - kubeflow.argo.michaelgoldstein.co
     port:
       name: http
-      number: 8081
+      number: 80
       protocol: HTTP
     # Upgrade HTTP to HTTPS
     tls:
@@ -20,7 +20,7 @@ spec:
     - kubeflow.argo.michaelgoldstein.co
     port:
       name: https
-      number: 4443
+      number: 443
       protocol: HTTPS
     tls:
       mode: SIMPLE
