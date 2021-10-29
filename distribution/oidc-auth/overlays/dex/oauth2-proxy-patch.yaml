@@ -39,16 +39,16 @@ spec:
       - name: extraArgs.skip-provider-button
         value: "true"
       - name: extraArgs.cookie-domain
-        value: .<<__domain__>>
+        value: .argo.michaelgoldstein.co
       - name: extraArgs.whitelist-domain
-        value: .<<__domain__>>
+        value: .argo.michaelgoldstein.co
       - name: extraArgs.oidc-issuer-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>"
+        value: "https://auth.argo.michaelgoldstein.co"
       - name: extraArgs.login-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/auth"
+        value: "https://auth.argo.michaelgoldstein.co/auth"
       - name: extraArgs.oidc-jwks-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/keys"
+        value: "https://auth.argo.michaelgoldstein.co/keys"
       - name: extraArgs.redeem-url
-        value: "https://<<__subdomain_auth__>>.<<__domain__>>/token"
+        value: "https://auth.argo.michaelgoldstein.co/token"
       - name: extraArgs.skip-oidc-discovery
         value: "true"

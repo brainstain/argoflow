@@ -8,7 +8,7 @@ spec:
   issuerRef:
     name: gateways-issuer
     kind: ClusterIssuer
-  commonName: <<__subdomain_radosgw__>>.<<__domain__>>
+  commonName: rgw.argo.michaelgoldstein.co
   dnsNames:
-    - <<__subdomain_radosgw__>>.<<__domain__>>
-    - '*.<<__subdomain_radosgw__>>.<<__domain__>>'
+    - rgw.argo.michaelgoldstein.co
+    - '*.rgw.argo.michaelgoldstein.co'
