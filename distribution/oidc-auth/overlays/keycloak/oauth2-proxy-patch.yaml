@@ -7,6 +7,9 @@ spec:
   project: default
   source:
     helm:
+      values: |
+        nodeSelector:
+          "beta.kubernetes.io/arch": amd64
       parameters:
       - name: image.repository
         value: quay.io/oauth2-proxy/oauth2-proxy
@@ -56,5 +59,3 @@ spec:
         value: profile
       - name: extraArgs.scope
         value: openid
-      - name: nodeSelector.'beta.kubernetes.io/arch'
-        value: amd64
