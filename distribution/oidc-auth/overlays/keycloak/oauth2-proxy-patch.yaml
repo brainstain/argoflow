@@ -56,5 +56,5 @@ spec:
         value: profile
       - name: extraArgs.scope
         value: openid
-      - name: nodeSelector."beta.kubernetes.io/arch"
+      - name: nodeSelector.'beta.kubernetes.io/arch'
         value: amd64
