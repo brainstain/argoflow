@@ -21,3 +21,11 @@ images:
   newName: mysql
   newTag: "8"
   # digest: sha256:355617769102e9d2ebb7d5879263a12d230badb7271c91748b2c7b0ac6971083
+
+patches:
+- path: ../../statefulSetSelectorPatch.yaml
+  target:
+    kind: StatefulSet
+- path: ../../deploymentSelectorPatch.yaml
+  target:
+    kind: Deployment
