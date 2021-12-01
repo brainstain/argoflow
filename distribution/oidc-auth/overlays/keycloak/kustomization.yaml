@@ -8,6 +8,7 @@ resources:
 - postgresql-secret.yaml
 - virtual-service.yaml
 - keycloak.yaml
+- postgresql.yaml
 
 patchesStrategicMerge:
 - oauth2-proxy-signout-virtual-service.yaml
