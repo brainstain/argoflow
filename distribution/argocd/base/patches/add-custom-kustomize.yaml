@@ -5,6 +5,8 @@ metadata:
 spec:
   template:
     spec:
+      nodeSelector:
+        beta.kubernetes.io/arch: amd64
     # 1. Define an emptyDir volume which will hold the custom binaries
       volumes:
       - name: custom-tools
