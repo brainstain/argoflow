@@ -10,7 +10,7 @@ resources:
 - argocd-applications/istio-operator.yaml
 - argocd-applications/istio.yaml    
 - argocd-applications/istio-resources.yaml
-# - argocd-applications/knative.yaml
+- argocd-applications/knative.yaml
 
 # Pick *one* of the following applications
 - argocd-applications/argocd.yaml
@@ -65,3 +65,11 @@ resources:
 # - argocd-applications/mlflow.yaml
 # - argocd-applications/experimental-pvcviewer-controller.yaml
 # - argocd-applications/experimental-volumes-web-app.yaml
+
+patches:
+- path: statefulSetSelectorPatch.yaml
+  target:
+    kind: StatefulSet
+- path: deploymentSelectorPatch.yaml
+  target:
+    kind: Deployment
