@@ -61,8 +61,8 @@ spec:
         value: "true"
       - name: metrics.serviceMonitor.namespace
         value: home
-      - name: nodeSelector."beta.kubernetes.io/arch"
-        value: amd64
+      - name: nodeSelector
+        value: '"beta.kubernetes.io/arch": amd64'
   destination:
     server: https://kubernetes.default.svc
     namespace: auth
