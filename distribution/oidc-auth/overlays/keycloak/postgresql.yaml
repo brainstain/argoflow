@@ -1,0 +1,31 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: keycloak-db
+  namespace: auth
+spec:
+  teamId: "keycloak"
+  volume:
+    size: 5Gi
+  numberOfInstances: 2
+  users:
+    keycloak:  # database owner
+    - superuser
+    - createdb
+  databases:
+    keycloak: keycloak # dbname: owner
+  preparedDatabases:
+    keycloak: {}
+  spiloRunAsUser: 101
+  spiloRunAsGroup: 103
+  spiloFSGroup: 103
+  postgresql:
+    version: "13"
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/arch
+              operator: In
+              values:
+                - amd64

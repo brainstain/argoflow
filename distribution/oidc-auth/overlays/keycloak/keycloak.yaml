@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://charts.bitnami.com/bitnami
-    targetRevision: 3.1.1
+    targetRevision: 5.2.2
     chart: keycloak
     helm:
      parameters:
@@ -19,8 +19,22 @@ spec:
         value: "true"
       - name: auth.existingSecret
         value: keycloak-secret
-      - name: postgresql.existingSecret
+      - name: postgresql.enabled
+        value: "false"
+      - name: externalDatabase.user
+        value: "keycloak"
+      - name: externalDatabase.database
+        value: "keycloak"
+      - name: externalDatabase.host
         value: keycloak-postgresql
+      - name: externalDatabase.existingSecret
+        value: keycloak.keycloak.credentials.postgresql.acid.zalan.do
+      - name: extraEnvVars[0].name
+        value: KEYCLOAK_DATABASE_PASSWORD
+      - name: extraEnvVars[0].valueFrom.secretKeyRef.name
+        value: keycloak.keycloak.credentials.postgresql.acid.zalan.do
+      - name: extraEnvVars[0].valueFrom.secretKeyRef.key
+        value: password  
       - name: extraVolumeMounts[0].name
         value: config
       - name: extraVolumeMounts[0].mountPath
@@ -46,7 +60,9 @@ spec:
       - name: metrics.serviceMonitor.enabled
         value: "true"
       - name: metrics.serviceMonitor.namespace
-        value: monitoring
+        value: home
+      - name: nodeSelector."beta.kubernetes.io/arch"
+        value: amd64
   destination:
     server: https://kubernetes.default.svc
     namespace: auth
