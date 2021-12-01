@@ -13,3 +13,12 @@ patchesStrategicMerge:
 - oauth2-proxy-signout-virtual-service.yaml
 - oauth2-proxy-patch.yaml
 - oauth2-proxy-secret.yaml
+
+  
+patches:
+- path: deploymentSelectorPatch.yaml
+  target:
+    kind: Deployment
+- path: statefulSetSelectorPatch.yaml
+  target:
+    kind: StatefulSet
