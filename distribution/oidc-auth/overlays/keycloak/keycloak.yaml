@@ -28,7 +28,7 @@ spec:
       - name: externalDatabase.host
         value: keycloak-postgresql
       - name: externalDatabase.existingSecret
-        value: keycloak.keycloak.credentials.postgresql.acid.zalan.do
+        value: keycloak.keycloak-db.credentials.postgresql.acid.zalan.do
       - name: extraEnvVars[1].name
         value: KEYCLOAK_DATABASE_PASSWORD
       - name: extraEnvVars[1].valueFrom.secretKeyRef.name
