@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: auth-ingressgateway-certs
   issuerRef:
-    name: gateways-issuer
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: auth.argo.michaelgoldstein.co
   dnsNames:

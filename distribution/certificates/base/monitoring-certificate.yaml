@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: monitoring-ingressgateway-certs
   issuerRef:
-    name: gateways-issuer
+    name: letsencrypt-prod
     kind: ClusterIssuer
   dnsNames:
     - grafana.argo.michaelgoldstein.co

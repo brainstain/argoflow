@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: kubeflow-ingressgateway-certs
   issuerRef:
-    name: gateways-issuer
+    name: letsencrypt-prod
     kind: ClusterIssuer
   commonName: kubeflow.argo.michaelgoldstein.co
   dnsNames:
