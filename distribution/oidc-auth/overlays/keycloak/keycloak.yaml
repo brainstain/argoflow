@@ -32,7 +32,7 @@ spec:
       - name: extraEnvVars[1].name
         value: KEYCLOAK_DATABASE_PASSWORD
       - name: extraEnvVars[1].valueFrom.secretKeyRef.name
-        value: keycloak.keycloak.credentials.postgresql.acid.zalan.do
+        value: keycloak.keycloak-db.credentials.postgresql.acid.zalan.do
       - name: extraEnvVars[1].valueFrom.secretKeyRef.key
         value: password  
       - name: extraVolumeMounts[0].name
