@@ -3,3 +3,8 @@ kind: Kustomization
 
 resources:
 - github.com/kubeflow/manifests/common/kubeflow-namespace/base
+
+patches:
+- path: patch.yaml
+  target:
+    kind: Namespace
