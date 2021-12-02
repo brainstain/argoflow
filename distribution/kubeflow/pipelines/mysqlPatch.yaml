@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  template:
+    spec:
+      containers:
+      - args:
+        - --datadir
+        - /var/lib/mysql
+        env:
+        - name: MYSQL_ALLOW_EMPTY_PASSWORD
+          value: "true"
+        resources:
+            requests:
+              cpu: 100m
+              memory: 800Mi

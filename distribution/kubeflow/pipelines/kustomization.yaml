@@ -62,6 +62,8 @@ images:
   newTag: v2.12.9-license-compliance
   # digest: sha256:4f9d6feb608fc5a55cbae4f23b9489f63073ab06dd46d0e87fc5114cc01857e9
 
+patchesStrategicMerge:
+- mysqlPatch.yaml
 
 patches:
 - path: deploymentSelectorPatch.yaml
