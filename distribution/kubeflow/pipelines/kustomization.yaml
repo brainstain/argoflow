@@ -54,9 +54,9 @@ images:
   newTag: 1.6.0
   # digest: sha256:6b11817b99538e890f3632f3b0e7c69d8c40126c162449ff7710b32e7cf99499
 - name: gcr.io/ml-pipeline/mysql
-  newName: gcr.io/ml-pipeline/mysql
-  newTag: "5.7"
-  # digest: sha256:4056370ee427dc9ff2337884674d8ee35f5b236c543bb8446b8b0a3751f70349
+  newName: mysql
+  newTag: "8"
+  # digest: sha256:355617769102e9d2ebb7d5879263a12d230badb7271c91748b2c7b0ac6971083
 - name: gcr.io/ml-pipeline/workflow-controller
   newName: gcr.io/ml-pipeline/workflow-controller
   newTag: v2.12.9-license-compliance
