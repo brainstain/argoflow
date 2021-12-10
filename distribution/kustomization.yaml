@@ -21,7 +21,7 @@ resources:
 # - argocd-applications/cert-manager-dns-01.yaml
 
 # Pick *one* of the following
-- argocd-applications/certificates.yaml
+# - argocd-applications/certificates.yaml
 # - argocd-applications/certificates-imported.yaml
 
 # Pick *one* of the following applications:  
