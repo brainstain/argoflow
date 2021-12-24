@@ -5,5 +5,13 @@ metadata:
 spec:
   template:
     spec:
+      containers:
+      - command:
+        - argocd-server
+        - --staticassets
+        - /shared/app
+        - --insecure
+        name: argocd-server
+        image: argoproj/argocd:latest
       nodeSelector:
         beta.kubernetes.io/arch: amd64
