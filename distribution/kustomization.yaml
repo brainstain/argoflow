@@ -13,7 +13,7 @@ resources:
 # - argocd-applications/knative.yaml
 
 # Pick *one* of the following applications
-- argocd-applications/argocd.yaml
+# - argocd-applications/argocd.yaml
 # - argocd-applications/argocd-private-repo.yaml
 
 # Pick *one* of the following applications 
